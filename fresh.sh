@@ -11,7 +11,7 @@ else
     echo -e "$GREEN[SUCCESS]$RESET You're running a Debian based distro. Contiuning..."
 fi
 
-if [[ $EUID -ne 0 ]]; then
+if [[ "$EUID" -ne 0 ]]; then
    echo -e "$RED[ALERT]$RESET Fuck it! You're not running the script as root" 
    exit 1
 fi
